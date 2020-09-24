@@ -1,6 +1,7 @@
 filename = ARGV.first
 
 txt = open(filename)        #initializing txt to the open(filename)
+#line above could just be txt = open(filename).read
 
 puts "Here's your file #{filename}:"
 print txt.read              #actually outputs what is inside the file

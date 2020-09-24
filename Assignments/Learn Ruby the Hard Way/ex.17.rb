@@ -13,7 +13,7 @@ puts "Ready, hit RETURN to continue, CTRL-C to abort."
 $stdin.gets
 
 out_file = open(to_file, 'w') #open new file in write mode
-out_file.write(indata)        #inser data from old file into new file
+out_file.write(indata)        #insert data from old file into new file
 
 puts "Alright, all done."
 

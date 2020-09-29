@@ -1,0 +1,10 @@
+animals = ['bear', 'ruby', 'peacock', 'kangaroo', 'whale', 'platypus']
+
+puts "animal at 1 is " + animals[1]
+puts "3rd animal is " + animals[2]
+puts "1st animal is " + animals[0]
+puts "animal at 3 is " + animals[3]
+puts "5th animal is " + animals[4]
+puts "animal at 2 is " + animals[2]
+puts "6th animal is " + animals[5]
+puts "animal at 4 is " + animals[4]

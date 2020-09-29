@@ -1,4 +1,4 @@
-module Ex25
+module Ex25 # collection of functions
 
   # This function will break up words for us.
   def Ex25.break_words(stuff)
@@ -42,5 +42,5 @@ module Ex25
     Ex25.print_first_word(words)
     Ex25.print_last_word(words)
   end
-
+#comment
 end

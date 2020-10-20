@@ -11,6 +11,14 @@
 end
 
 4.times do |i|
-  Department.create(store: "#{Faker::Company.name} Grocery Store", name: Faker::FunnyName.name, description: Faker::Restaurant.description )
+  Department.create(store: Faker::IDNumber.valid, name: "#{Faker::Company.name} Grocery Store", description: Faker::Restaurant.description, code: Faker::IDNumber.valid)
+end
+
+4.times do |i|
+  Employee.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Company.buzzword, role: Faker::Job.title, status: Faker::Subscription.status, )
+end
+
+4.times do |i|
+  Review.create(note: Faker::ChuckNorris.fact)
 end
 

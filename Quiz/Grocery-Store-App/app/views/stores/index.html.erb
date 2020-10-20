@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+
+    <div class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/stores">Stores <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/departments">Department</a>
+            <a class="nav-link" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/employees">Employee</a>
+            <a class="nav-link" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/reviews">Review</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+    
+<h1>Stores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Url</th>
+      <th>Status</th>
+      <th>Code</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Country</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stores.each do |store| %>
+      <tr>
+        <td><%= store.name %></td>
+        <td><%= store.description %></td>
+        <td><%= store.url %></td>
+        <td><%= store.status %></td>
+        <td><%= store.code %></td>
+        <td><%= store.address %></td>
+        <td><%= store.city %></td>
+        <td><%= store.state %></td>
+        <td><%= store.zip %></td>
+        <td><%= store.country %></td>
+        <td><%= link_to 'Show', store %></td>
+        <td><%= link_to 'Edit', edit_store_path(store) %></td>
+        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Store', new_store_path %>

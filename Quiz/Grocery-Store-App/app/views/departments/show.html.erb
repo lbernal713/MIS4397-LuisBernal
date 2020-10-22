@@ -1,29 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Store:</strong>
-  <%= @department.store_id %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @department.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @department.description %>
-</p>
-
-<p>
-  <strong>Code:</strong>
-  <%= @department.code %>
-</p>
-
-<p>
-  <strong>Store:</strong>
-  <%= @department.store %>
-</p>
-
-<%= link_to 'Edit', edit_department_path(@department) %> |
-<%= link_to 'Back', departments_path %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="column m-auto">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Department</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Department Information</h6>
+              <p class="card-text"><p>
+                  <p>
+                    <strong>Store:</strong>
+                    <%= @department.store_id %>
+                  </p>
+                  
+                  <p>
+                    <strong>Name:</strong>
+                    <%= @department.name %>
+                  </p>
+                  
+                  <p>
+                    <strong>Description:</strong>
+                    <%= @department.description %>
+                  </p>
+                  
+                  <p>
+                    <strong>Code:</strong>
+                    <%= @department.code %>
+                  </p>
+                  
+                  <p>
+                    <strong>Store:</strong>
+                    <%= @department.store %>
+                  </p>
+              <%= link_to 'Edit', edit_department_path(@department) %> |
+              <%= link_to 'Back', departments_path %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    

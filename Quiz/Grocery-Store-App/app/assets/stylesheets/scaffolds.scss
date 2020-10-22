@@ -10,17 +10,15 @@ p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  margin: 33px;
 }
 
 pre {
   background-color: #eee;
-  padding: 10px;
   font-size: 11px;
 }
 
 a {
-  
+  color:red;
 
   &:visited {
     
@@ -84,4 +82,7 @@ div {
 
 label {
   display: block;
+}
+h1{
+  text-align:center;
 }

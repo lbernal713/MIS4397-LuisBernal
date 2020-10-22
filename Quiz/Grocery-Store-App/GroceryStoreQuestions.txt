@@ -1,0 +1,38 @@
+What is a resource?
+
+These are entities of a database within Ruby
+
+
+
+What is REST? 
+
+Representational State Transfer an architectural style for web-based communication
+
+
+
+What is the difference between get and post ?
+get is when you retrieve data from a server
+post is when you input data onto a server
+
+
+
+What is an example of a custom route?
+
+How to: get ‘/path’, to: “controller_name#method_name”
+get ‘/diaries/:id/entries’, to: ‘diaries#diary_entries’, as: ‘diary_entries’
+
+
+
+What is the purpose of the routes.rb file?
+
+Contains a list of the existing entities/resources in the file
+This links them to the database
+
+
+ 
+What is MVC? 
+
+Model View Controller 
+- Models handle the data and communicate the logic to the database
+- Views are what you actually see on the web browser
+- Controller handle the user interface and application

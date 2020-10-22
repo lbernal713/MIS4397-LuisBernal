@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <div class="fixed-top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light"  style="background-color:#abc1eb">
       <a class="navbar-brand" href="#">Grocery Store</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,15 +9,15 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/stores">Stores <span class="sr-only">(current)</span></a>
-          <a class="nav-link" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/departments">Department</a>
-          <a class="nav-link active" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/employees">Employee</a>
-          <a class="nav-link" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/reviews">Review</a>
+          <a class="nav-link" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/departments">Departments</a>
+          <a class="nav-link active" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/employees">Employees</a>
+          <a class="nav-link" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/reviews">Reviews</a>
         </div>
       </div>
     </nav>
+  </div>
 
-
-<h1>Employees</h1>
+<h1 style=" margin-top: 68px;">Employees</h1>
 
 <table class="table table-dark">
   <thead>
@@ -30,6 +31,7 @@
     </tr>
   </thead>
   <tbody>
+    <body style="background-color:#f8f9fa;">
     <% @employees.each do |employee| %>
       <tr>
         <td><%= employee.first_name %></td>
@@ -40,7 +42,7 @@
         <td><%= employee.department %></td>
         <td><button type="button" class="btn btn-outline-primary"><%= link_to 'Show', employee %></button></td>
         <td><button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_employee_path(employee) %></button></td>
-        <td><button type="button" class="btn btn-outline-primary"><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+        <td><button type="button" class="btn btn-danger"><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>

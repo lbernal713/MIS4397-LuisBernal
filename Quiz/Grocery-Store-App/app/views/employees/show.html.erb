@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="column m-auto">
-          <div class="card" style="width: 18rem;">
+          <div class="card bg-light mb-3" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Employee</h5>
               <h6 class="card-subtitle mb-2 text-muted">Employee Information</h6>
@@ -37,8 +37,8 @@
                     <strong>Department:</strong>
                     <%= @employee.department %>
                   </p>
-              <%= link_to 'Edit', edit_employee_path(@employee) %> |
-              <%= link_to 'Back', employees_path %>
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_employee_path(@employee) %></button> |
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Back', employees_path %></button>
             </div>
           </div>
         </div>

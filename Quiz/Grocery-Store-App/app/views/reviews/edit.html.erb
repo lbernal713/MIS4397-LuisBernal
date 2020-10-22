@@ -1,6 +1,22 @@
-<h1>Editing Review</h1>
+<p id="notice"><%= notice %></p>
 
-<%= render 'form', review: @review %>
+<div class="container-fluid">
+      <div class="row">
+        <div class="column m-auto">
+          <div class="card bg-light mb-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Editing Review</h5>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <p class="card-text"><p>
+                  <h1></h1>
 
-<%= link_to 'Show', @review %> |
-<%= link_to 'Back', reviews_path %>
+                    <%= render 'form', review: @review %>
+                    
+                    
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Show', @review %>  </button> |
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Back', reviews_path %></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

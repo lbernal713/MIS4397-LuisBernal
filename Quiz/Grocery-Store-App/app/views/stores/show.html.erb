@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+
     <div class="container-fluid">
       <div class="row">
         <div class="column m-auto">
-          <div class="card" style="width: 18rem;">
+          <div class="card bg-light mb-3" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Employee</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Employee Information</h6>
+              <h5 class="card-title">Store</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Store Information</h6>
               <p class="card-text"><p>
                   <p>
                     <strong>Name:</strong>
@@ -57,8 +58,8 @@
                     <strong>Country:</strong>
                     <%= @store.country %>
                   </p>
-              <%= link_to 'Edit', edit_store_path(@store) %> |
-              <%= link_to 'Back', stores_path %>
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_store_path(@store) %></button>|
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Back', stores_path %></button>
             </div>
           </div>
         </div>

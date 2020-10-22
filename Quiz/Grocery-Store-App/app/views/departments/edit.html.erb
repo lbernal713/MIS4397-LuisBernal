@@ -1,6 +1,22 @@
-<h1>Editing Department</h1>
+<p id="notice"><%= notice %></p>
 
-<%= render 'form', department: @department %>
+<div class="container-fluid">
+      <div class="row">
+        <div class="column m-auto">
+          <div class="card bg-light mb-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Editing Department</h5>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <p class="card-text"><p>
+                  <h1></h1>
 
-<%= link_to 'Show', @department %> |
-<%= link_to 'Back', departments_path %>
+                    <%= render 'form', department: @department %>
+                    
+                    
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Show', @department %>  </button> |
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Back', departments_path %></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

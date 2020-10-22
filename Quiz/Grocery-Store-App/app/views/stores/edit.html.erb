@@ -1,6 +1,22 @@
-<h1>Editing Store</h1>
+<p id="notice"><%= notice %></p>
 
-<%= render 'form', store: @store %>
+<div class="container-fluid">
+      <div class="row">
+        <div class="column m-auto">
+          <div class="card bg-light mb-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Editing Store</h5>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <p class="card-text"><p>
+                  <h1></h1>
 
-<%= link_to 'Show', @store %> |
-<%= link_to 'Back', stores_path %>
+                    <%= render 'form', store: @store %>
+                    
+                    
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Show', @store %>  </button> |
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Back', stores_path %></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

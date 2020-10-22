@@ -1,29 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-    <div class="container-fluid">
+<div class="container-fluid">
       <div class="row">
         <div class="column m-auto">
-          <div class="card" style="width: 18rem;">
+          <div class="card bg-light mb-3" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Review</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <h5 class="card-title">Store</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Store Information</h6>
               <p class="card-text"><p>
-                  <strong>Note:</strong>
-                  <%= @review.note %>
-                </p>
-                
-                <p>
-                  <strong>Store:</strong>
-                  <%= @review.store %>
-                </p>
-                </p>
-              <%= link_to 'Edit', edit_review_path(@review) %> |
-              <%= link_to 'Back', reviews_path %>
+                  <p>
+                    <strong>Note:</strong>
+                    <%= @review.note %>
+                  </p>
+                  
+                  <p>
+                    <strong>Store:</strong>
+                    <%= @review.store %>
+                  </p>
+
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_review_path(@review) %> </button> |
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Back', reviews_path %></button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    
-    

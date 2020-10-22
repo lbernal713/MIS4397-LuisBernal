@@ -1,6 +1,22 @@
-<h1>Editing Employee</h1>
+<p id="notice"><%= notice %></p>
 
-<%= render 'form', employee: @employee %>
+<div class="container-fluid">
+      <div class="row">
+        <div class="column m-auto">
+          <div class="card bg-light mb-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Editing Employee</h5>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <p class="card-text"><p>
+                  <h1></h1>
 
-<%= link_to 'Show', @employee %> |
-<%= link_to 'Back', employees_path %>
+                    <%= render 'form', employee: @employee %>
+                    
+                    
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Show', @employee %>  </button> |
+              <button type="button" class="btn btn-outline-primary"><%= link_to 'Back', employees_path %></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

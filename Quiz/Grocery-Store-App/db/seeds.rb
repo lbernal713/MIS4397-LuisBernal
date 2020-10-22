@@ -19,6 +19,6 @@ end
 end
 
 4.times do |i|
-  Review.create(note: Faker::ChuckNorris.fact, store: @store_id)
+  Review.create(note: Faker::Restaurant.review, store: @store_id)
 end
 

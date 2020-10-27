@@ -32,7 +32,7 @@
     <% @reviews.each do |review| %>
       <tr>
         <td><%= review.note %></td>
-        <td><%= review.store %></td>
+        <td><%= review.store.id %></td>
         <td><button type="button" class="btn btn-outline-primary"><%= link_to 'Show', review %></button></td>
         <td><button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_review_path(review) %></button></td>
         <td><button type="button" class="btn btn-danger"><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
@@ -41,7 +41,41 @@
   </tbody>
 </table>
 
+<button type="button" class="btn btn-outline-primary"><%= link_to 'New Review', new_review_path %></button>
 
 <br>
-
-<button type="button" class="btn btn-outline-primary"><%= link_to 'New Review', new_review_path %></button>
+ <div class="container-fluid">
+      <div class="row">
+        <% @reviews.each do |review| %>
+        <div class="col-md-3">
+          <div class="card bg-light mb-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Review</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Review Information</h6>
+              <p class="card-text"><p>
+                
+                  <p>
+                    <strong>Store ID:</strong>
+                    <%= review.store.id %>
+                  </p>
+                  
+                  <p>
+                    <strong>Store Name:</strong>
+                    <%= review.store.name %>
+                  </p>
+                  
+                  <p>
+                    <strong>Note:</strong>
+                    <%= review.note %>
+                  </p>
+                  
+                  
+                <button type="button" class="btn btn-outline-primary"><%= link_to 'Show', review %></button>
+                <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_review_path(review) %></button>
+                <button type="button" class="btn btn-danger"><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></button></p>
+            </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <% end %>

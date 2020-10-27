@@ -35,7 +35,7 @@
                   
                   <p>
                     <strong>Department:</strong>
-                    <%= @employee.department %>
+                    <%= @employee.department.id %>
                   </p>
               <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_employee_path(@employee) %></button> |
               <button type="button" class="btn btn-outline-primary"><%= link_to 'Back', employees_path %></button>

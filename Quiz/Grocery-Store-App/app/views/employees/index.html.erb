@@ -53,9 +53,10 @@
 
 <div class="container-fluid">
       <div class="row">
-        <% @employees.each do |employee| %>
-        <div class="col-md-3">
-          <div class="card bg-light mb-3" style="width: 18rem;">
+        
+        <div class="col-md-4" >
+          <% @employees.each do |employee| %>
+          <div class="card bg-light mb-3" style="width: 18rem; float:right;">
             <div class="card-body">
               <h5 class="card-title">Employee</h5>
               <h6 class="card-subtitle mb-2 text-muted">Employee Information</h6>

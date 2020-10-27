@@ -45,13 +45,19 @@
 
 <br>
  <div class="container-fluid">
-      <div class="row">
+   
+      <div class="row header">
+        <div class="col">
+          </div>
+          </div>
+          <div class="row content">
         <% @reviews.each do |review| %>
-        <div class="col-md-3">
-          <div class="card bg-light mb-3" style="width: 18rem;">
+        <div class="col-md-4" style="float:right">
+          
+          <div class="card bg-light" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Review</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Review Information</h6>
+              <h6 class="card-subtitle text-muted">Review Information</h6>
               <p class="card-text"><p>
                 
                   <p>
@@ -74,7 +80,7 @@
                 <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_review_path(review) %></button>
                 <button type="button" class="btn btn-danger"><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></button></p>
             </div>
-            </div>
+          </div>
           </div>
       </div>
     </div>

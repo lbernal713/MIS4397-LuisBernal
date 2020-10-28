@@ -12,7 +12,7 @@ end
 
 Store.all.each do |store|
   3.times do |i|
-    Department.create(store: store, name: Faker::Company.name, description: Faker::Restaurant.description, code: Faker::IDNumber.valid)
+    Department.create(store: store, name: Faker::Company.name, description: Faker::Commerce.department, code: Faker::IDNumber.valid)
   end
 end
 

@@ -5,19 +5,24 @@
         <div class="column m-auto">
           <div class="card bg-light mb-3" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Store</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Store Information</h6>
-              <p class="card-text"><p>
+              <h5 class="card-title">Review</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Review Information</h6>
+              <p class="card-text">
+                  <p>
+                    <strong>Store Name:</strong>
+                    <%= @review.store.name %>
+                  </p>
+                  <p>
+                    <strong>Store ID:</strong>
+                    <%= @review.store.id %>
+                  </p>
+
                   <p>
                     <strong>Note:</strong>
                     <%= @review.note %>
                   </p>
                   
-                  <p>
-                    <strong>Store:</strong>
-                    <%= @review.store.id %>
-                  </p>
-
+                  
               <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_review_path(@review) %> </button> |
               <button type="button" class="btn btn-outline-primary"><%= link_to 'Back', reviews_path %></button>
             </div>

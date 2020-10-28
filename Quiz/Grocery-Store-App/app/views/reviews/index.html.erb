@@ -7,7 +7,7 @@
     <div class="container-fluid">
       <div class= "row">
         <% @reviews.each do |review| %>
-            <div class= "col-md-3 d-flex align-items-stretch"style="float:right">
+            <div class= "col-md-3 d-flex align-items-stretch">
               <div class="card bg-light mb-3" style="width: 18rem;">
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title">Review</h5>
@@ -34,7 +34,7 @@
                     <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_review_path(review) %></button>
                     <button type="button" class="btn btn-danger"><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></button></p>
                   </div>
-                            </div>
+                  </div>
                 </div>   
               </div>
               <% end %>

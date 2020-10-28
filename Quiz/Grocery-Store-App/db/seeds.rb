@@ -18,7 +18,7 @@ end
 
 Department.all.each do |department|
   2.times do |i|
-    Employee.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Company.buzzword, role: Faker::Job.title, status: Faker::Subscription.status, department: department)
+    Employee.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Company.buzzword, role: Faker::Job.title, status: Faker::Subscription.status, department: department, picture: Faker::Avatar.image)
   end
 end
 

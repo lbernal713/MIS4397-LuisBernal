@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201020190012) do
+ActiveRecord::Schema.define(version: 20201027213223) do
 
   create_table "departments", force: :cascade do |t|
     t.integer  "store_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20201020190012) do
     t.integer  "department_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "picture"
     t.index ["department_id"], name: "index_employees_on_department_id"
   end
 

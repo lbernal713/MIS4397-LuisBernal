@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-
+<% @store.each do |store| %>
+  <%if(@store.store.id == @department.store.id ) %>
+    Helloworld
+  <% end %>
     <div class="container-fluid">
       <div class="row">
         <div class="column m-auto">
@@ -62,6 +65,7 @@
               <button type="button" class="btn btn-outline-primary"><%= link_to 'Back', stores_path %></button>
             </div>
           </div>
+          <% end %>
         </div>
       </div>
     </div>

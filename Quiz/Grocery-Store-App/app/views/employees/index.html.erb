@@ -1,103 +1,66 @@
 <p id="notice"><%= notice %></p>
 
-  <div class="fixed-top">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light"  style="background-color:#bbdef0">
-      <a class="navbar-brand" href="#">Grocery Store</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/stores">Stores <span class="sr-only">(current)</span></a>
-          <a class="nav-link" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/departments">Departments</a>
-          <a class="nav-link active" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/employees">Employees</a>
-          <a class="nav-link" href="https://2995a66600084a5ea0c1fb107d6eab49.vfs.cloud9.us-east-2.amazonaws.com/reviews">Reviews</a>
-        </div>
-      </div>
-    </nav>
-  </div>
+  
 
 <h1 style=" margin-top: 68px;">Employees</h1>
-
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Description</th>
-      <th scope="col">Role</th>
-      <th scope="col">Status</th>
-      <th scope="col">Department</th>
-    </tr>
-  </thead>
-  <tbody>
-    <body style="background-color:#f8f9fa;">
-    <% @employees.each do |employee| %>
-      <tr>
-        <td><%= employee.first_name %></td>
-        <td><%= employee.last_name %></td>
-        <td><%= employee.description %></td>
-        <td><%= employee.role %></td>
-        <td><%= employee.status %></td>
-        <td><%= employee.department.id %></td>
-        <td><button type="button" class="btn btn-outline-primary"><%= link_to 'Show', employee %></button></td>
-        <td><button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_employee_path(employee) %></button></td>
-        <td><button type="button" class="btn btn-danger"><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<button type="button" class="btn btn-outline-primary"><%= link_to 'New Employee', new_employee_path %></button>
-
 <br>
 
 <div class="container-fluid">
-      <div class="row">
-        
-        <div class="col-md-4" >
-          <% @employees.each do |employee| %>
-          <div class="card bg-light mb-3" style="width: 18rem; float:right;">
+  <div class= "row-fluid">
+    <% @employees.each do |employee| %>
+        <div class= "col-3" style="float:right" >
+          <div class= "m-auto p-1">
+          <div class="card" style="width: 18rem;">
+            <img src="<%= employee.picture %>" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Employee</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Employee Information</h6>
-              <p class="card-text"><p>
-                  <p>
-                    <strong>First Name:</strong>
-                    <%= employee.first_name %>
-                  </p>
-                  
-                  <p>
-                    <strong>Last Name:</strong>
-                    <%= employee.last_name %>
-                  </p>
-                  
-                  <p>
-                    <strong>Description:</strong>
-                    <%= employee.description %>
-                  </p>
-                  
-                  <p>
-                    <strong>Role:</strong>
-                    <%= employee.role %>
-                  </p>
-                  
-                  <p>
-                    <strong>Status:</strong>
-                    <%= employee.status %>
-                  </p>
-                  
-                  <p>
-                    <strong>Department ID:</strong>
-                    <%= employee.department.id %>
-                  </p>
-                  
-                  
-                <button type="button" class="btn btn-outline-primary"><%= link_to 'Show', employee %></button>
-                <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_employee_path(employee) %></button>
-                <button type="button" class="btn btn-danger"><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></button></p>
-            </div>
-            </div>
+              <p class="card-text">
+                        <p>
+                          <strong>First Name:</strong>
+                          <%= employee.first_name %>
+                        </p>
+                        
+                        <p>
+                          <strong>Last Name:</strong>
+                          <%= employee.last_name %>
+                        </p>
+                        
+                        <p>
+                          <strong>Description:</strong>
+                          <%= employee.description %>
+                        </p>
+                        
+                        <p>
+                          <strong>Role:</strong>
+                          <%= employee.role %>
+                        </p>
+                        
+                        <p>
+                          <strong>Status:</strong>
+                          <%= employee.status %>
+                        </p>
+                        
+                        <p>
+                          <strong>Department ID:</strong>
+                          <%= employee.department.id %>
+                        </p>
+                      <button type="button" class="btn btn-outline-primary"><%= link_to 'Show', employee %></button>
+                      <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_employee_path(employee) %></button>
+                      <button type="button" class="btn btn-danger"><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></button></p>
+            </div>   
           </div>
+        </div>        
       </div>
-    </div>
-    <% end %>
+      
+       <% end %>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+<button type="button" class="btn btn-outline-primary"><%= link_to 'New Employee', new_employee_path %></button>
+

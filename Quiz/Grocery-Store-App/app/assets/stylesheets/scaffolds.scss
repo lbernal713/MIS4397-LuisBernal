@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -6,11 +6,7 @@ body {
   line-height: 18px;
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
+
 
 pre {
   background-color: #eee;
@@ -35,9 +31,7 @@ th {
 }
 
 td {
-  padding-bottom: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
+  
 }
 
 div {
@@ -86,4 +80,22 @@ label {
 h1{
   text-align:center;
   margin-top:50px;
+}
+*/
+td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+.card-buttons{
+  margin-top: auto;
+}
+
+#notice {
+  margin:0px;
 }

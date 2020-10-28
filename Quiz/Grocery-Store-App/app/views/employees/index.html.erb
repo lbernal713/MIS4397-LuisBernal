@@ -2,17 +2,18 @@
 
   
 
-<h1 style=" margin-top: 68px;">Employees</h1>
+<h1 class="display-3 text-center">Employees</h1>
 <br>
 
 <div class="container-fluid">
-  <div class= "row-fluid">
+  <div class= "row">
     <% @employees.each do |employee| %>
-        <div class= "col-3" style="float:right" >
-          <div class= "m-auto p-1">
-          <div class="card" style="width: 18rem;">
+        <div class= "col-md-3 d-flex align-items-stretch"style="float:right">
+          <div class="card bg-light mb-3" style="width: 18rem;">
+            <div class="card-body d-flex flex-column">
             <img src="<%= employee.picture %>" class="card-img-top" alt="...">
-            <div class="card-body">
+              <br>
+              <h6 class="card-subtitle mb-2 text-muted">Employee Information</h6>
               <p class="card-text">
                         <p>
                           <strong>First Name:</strong>
@@ -43,12 +44,13 @@
                           <strong>Department ID:</strong>
                           <%= employee.department.id %>
                         </p>
-                      <button type="button" class="btn btn-outline-primary"><%= link_to 'Show', employee %></button>
-                      <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_employee_path(employee) %></button>
-                      <button type="button" class="btn btn-danger"><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></button></p>
+                        <div class="card-buttons">
+                          <button type="button" class="btn btn-outline-primary"><%= link_to 'Show', employee %></button>
+                          <button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_employee_path(employee) %></button>
+                          <button type="button" class="btn btn-danger"><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></button></p>
+                        </div>
             </div>   
           </div>
-        </div>        
       </div>
       
        <% end %>

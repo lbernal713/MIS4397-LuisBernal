@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: MyString
+  year: MyString
+  condition: MyString
+  location_address: MyString
+
+two:
+  model: MyString
+  year: MyString
+  condition: MyString
+  location_address: MyString

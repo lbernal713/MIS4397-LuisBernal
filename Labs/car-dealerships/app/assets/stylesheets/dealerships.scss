@@ -1,0 +1,26 @@
+// Place all the styles related to the dealerships controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.Dealership .card{
+    background-color:powderblue;
+    color:purple;
+}
+
+.dealership-table{
+    width:90%;
+    margin:0 auto;
+    text-align:center;
+    border:5px purple solid;
+    padding:20px;
+    background-color:lightgrey;
+}
+
+.Dealership h1{
+    text-align:center;
+    margin:10px;
+    margin-top:40px;
+}
+.table-black{
+  margin-top:20px;
+}
